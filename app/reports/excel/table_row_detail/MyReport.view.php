@@ -6,7 +6,8 @@ use \koolreport\datagrid\DataTables;
         <h1>Excel Row Detail Table</h1>
         <p class="lead">Exporting excel table with row detail table</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="export.php?type=excel">Download Excel</button>
+			<?php echo csrf_field(); ?>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export">Download Excel</button>
 			<button type="submit" class="btn btn-primary" formaction="export.php?type=bigspreadsheet">Download Big Spreadsheet</button>
 		</form>
 	</div>

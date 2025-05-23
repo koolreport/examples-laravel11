@@ -19,7 +19,7 @@
                 'image' => [
                     'formatValue' => function($value, $row, $ckey, $meta) {
                         return \koolreport\excel\Image::create([
-                            'path' => '../../../assets/images/bar.png',
+                            'path' => public_path() . '/assets/images/bar.png',
 
                             // use offsetX, offsetY as margin
                             'offsetX' => 5, // default: 0

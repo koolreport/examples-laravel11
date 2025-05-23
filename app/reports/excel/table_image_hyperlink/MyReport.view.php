@@ -7,7 +7,8 @@ use \koolreport\widgets\koolphp\Table;
         <h1>Excel Exporting Image and Hyperlink Columns</h1>
         <p class="lead">Exporting excel table with image and hyperlink columns</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="export.php?type=excel">Download Excel</button>
+			<?php echo csrf_field(); ?>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export">Download Excel</button>
 		</form>
 	</div>
 	<div class='box-container'>
@@ -22,7 +23,7 @@ use \koolreport\widgets\koolphp\Table;
 					),
 					'image' => [
 						'formatValue' => function($value, $row, $ckey) {
-							return '<img src="../../../assets/images/bar.png" height="40px" />';
+							return '<img src="../../assets/images/bar.png" height="40px" />';
 						},
 					],
 					'url' => [

@@ -5,7 +5,7 @@
     <div range="A1:C5">
         <?php
         \koolreport\excel\Image::create(array(
-            'path' => '../../../assets/images/bar.png', // must have
+            'path' => public_path() . '/assets/images/bar.png', // must have
 
             // "range" => "B2:D4", // overrides width, height if exists
             // 'coordinate' => 'B2', // default: A1

@@ -2,11 +2,12 @@
 use \koolreport\pivot\widgets\PivotMatrix;
 ?>
 <form method="post">
+			<?php echo csrf_field(); ?>
 	<div class="report-content">
 		<div style='text-align: center;margin-bottom:30px;'>
 			<h1>Excel Exporting Template</h1>
 			<p class="lead">Exporting pivot matrix with template</p>
-				<button type="submit" class="btn btn-primary" formaction="export.php">Download Excel</button>
+				<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export">Download Excel</button>
 				<input type="hidden" name="koolPivotUpdate" value="1" />
 		</div>
 		<div class='box-container'>

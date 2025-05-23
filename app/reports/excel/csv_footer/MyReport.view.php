@@ -7,7 +7,8 @@ use \koolreport\widgets\koolphp\Table;
         <h1>CSV Footer</h1>
         <p class="lead">How to use footers and aggregates when exporting to CSV</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="export.php">Export to CSV</button>
+			<?php echo csrf_field(); ?>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export">Export to CSV</button>
 		</form>
 	</div>
 	<div class='box-container'>

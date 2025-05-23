@@ -7,7 +7,7 @@ use \koolreport\widgets\koolphp\Table;
         <h1>Excel Exporting Hyperlink</h1>
         <p class="lead">Exporting excel hyperlink with template</p>
 		<form>
-			<button type="submit" class="btn btn-primary" formaction="export.php">Download Excel</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export">Download Excel</button>
 		</form>
 	</div>
 	<div class='box-container'>

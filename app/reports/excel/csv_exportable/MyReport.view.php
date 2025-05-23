@@ -7,9 +7,10 @@ use \koolreport\widgets\koolphp\Table;
         <h1>CSV Exportable</h1>
         <p class="lead">How to export datastores to CSV files</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="export.php">Export to CSV</button>
-			<button type="submit" class="btn btn-primary" formaction="export.php?multiply=10">Large CSV (30 thousand rows)</button>
-			<button type="submit" class="btn btn-primary" formaction="export.php?multiply=100">Huge CSV (300 thousand rows)</button>
+			<?php echo csrf_field(); ?>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export">Export to CSV</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export?multiply=10">Large CSV (30 thousand rows)</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export?multiply=100">Huge CSV (300 thousand rows)</button>
 		</form>
 	</div>
 	<div class='box-container'>

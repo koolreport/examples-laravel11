@@ -14,7 +14,8 @@ use \koolreport\sparklines\Tristate;
 		<h1>Excel Exporting Charts in Table</h1>
 		<p class="lead">Exporting table with chart column</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="export.php?type=excel">Download Excel</button>
+			<?php echo csrf_field(); ?>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export?type=excel">Download Excel</button>
 		</form>
 	</div>
 	<div class='box-container'>

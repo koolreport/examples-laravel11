@@ -7,8 +7,9 @@ use \koolreport\datagrid\DataTables;
         <h1>Excel Table Complex Header</h1>
         <p class="lead">Exporting table with complex headers</p>
 		<form method="post">
-			<button type="submit" class="btn btn-primary" formaction="export.php?type=excel">Download Excel</button>
-			<button type="submit" class="btn btn-primary" formaction="export.php?type=bigspreadsheet">Download Big Spreadsheet</button>
+			<?php echo csrf_field(); ?>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export?type=excel">Download Excel</button>
+			<button type="submit" class="btn btn-primary" formaction="<?php echo url()->current(); ?>/export?type=bigspreadsheet">Download Big Spreadsheet</button>
 		</form>
 	</div>
 	<div class='box-container'>
