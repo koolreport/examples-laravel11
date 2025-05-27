@@ -77,7 +77,7 @@ Then you can access after running
 http://locahost:8000/customReport
 ```
 
-![laravel8_combochart](laravel8_combochart.png)
+![combochart](combochart.png)
 
 
 ## CSRF field/token in form submissions and xhr requests
