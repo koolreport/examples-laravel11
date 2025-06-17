@@ -12,7 +12,7 @@ $report->render();
     <title>
         Custom Tooltips using Data Points
     </title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
     <style>
         canvas {
             -moz-user-select: none;

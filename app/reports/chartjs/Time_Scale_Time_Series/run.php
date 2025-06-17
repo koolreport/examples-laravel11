@@ -38,7 +38,8 @@ if (!isset($_POST['command'])) {
     <title>
         Line Chart
     </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="<?php echo csrf_token(); ?>" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <style>
         canvas {
             width: 1000px !important;
@@ -65,6 +66,11 @@ if (!isset($_POST['command'])) {
 
     <script>
         $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $('#update').click(function(e) {
                 e.preventDefault();
                 var unit = $('#unit').map(function() {
@@ -75,7 +81,7 @@ if (!isset($_POST['command'])) {
                 }).get();
                 $.ajax({
                     type: "POST",
-                    url: 'run.php',
+                    // url: 'run.php',
                     data: {
                         command: 'update',
                         unit: unit,

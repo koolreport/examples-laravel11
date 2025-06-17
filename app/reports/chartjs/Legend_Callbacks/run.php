@@ -30,7 +30,9 @@ $report->render();
             padding: 8px;
             overflow-y: auto;
             white-space: pre;
-            line-height: 1.5em;
+            line-height: 2em;
+            margin-top: 45px;
+            margin-bottom: 180px;
         }
     </style>
 </head>

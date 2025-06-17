@@ -38,10 +38,10 @@
             "options" => [
                 'fill | image' => [
                     'src' => [
-                        '../pie_image/images/stripes.jpg',
-                        '../pie_image/images/1101098.png',
-                        '../pie_image/images/4679113782_ca13e2e6c0_z.jpg',
-                        '../pie_image/images/2979121308_59539a3898_z.jpg'
+                        '/assets/images/pie_image/stripes.jpg',
+                        '/assets/images/pie_image/1101098.png',
+                        '/assets/images/pie_image/4679113782_ca13e2e6c0_z.jpg',
+                        '/assets/images/pie_image/2979121308_59539a3898_z.jpg'
                     ],
                     'width' => 25,
                     'imagedHeight' => 25,

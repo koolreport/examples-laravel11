@@ -37,17 +37,23 @@ if (isset($_GET)) {
     <title>
         Doughnut Chart
     </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="<?php echo csrf_token(); ?>" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 </head>
 
 <body>
     <script>
         $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $('#randomizeData').click(function(e) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: 'randomizeData',
                     },
@@ -60,7 +66,7 @@ if (isset($_GET)) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: 'addDataset'
                     },
@@ -73,7 +79,7 @@ if (isset($_GET)) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: 'removeDataset'
                     },
@@ -86,7 +92,7 @@ if (isset($_GET)) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: 'addData'
                     },
@@ -99,7 +105,7 @@ if (isset($_GET)) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: 'removeData'
                     },
@@ -112,7 +118,7 @@ if (isset($_GET)) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: 'changeCircleSize'
                     },
