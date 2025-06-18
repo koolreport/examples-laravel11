@@ -32,7 +32,7 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 */
 
 // must be included before vendor/autoload.php for error message to be shown
-require __DIR__.'/../../GitHub-KoolReport/core/autoload.php'; 
+// require __DIR__.'/../../GitHub-KoolReport/core/autoload.php'; 
 
 require __DIR__.'/../vendor/autoload.php';
 

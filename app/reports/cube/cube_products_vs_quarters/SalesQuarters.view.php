@@ -15,6 +15,7 @@
             $_POST['salesYear'] : array(2003, 2004, 2005);
     ?>
     <form method="post">
+        <?= csrf_field() ?>
         <div class="form-group">
             <span style="margin-left:10px;">
                 <input id="y2003" type="checkbox" name="salesYear[]" value="2003"

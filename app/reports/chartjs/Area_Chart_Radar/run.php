@@ -36,7 +36,8 @@ if (!isset($_POST['command'])) {
     <title>
         area > radar | Chart.js sample
     </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="<?php echo csrf_token(); ?>" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <style>
         body,
         html {
@@ -93,11 +94,16 @@ if (!isset($_POST['command'])) {
 
     <script>
         $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $("#smooth").click(function(e) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: "smooth"
                     },
@@ -110,7 +116,7 @@ if (!isset($_POST['command'])) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: "randomize"
                     },
@@ -123,7 +129,7 @@ if (!isset($_POST['command'])) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: "run.php",
+                    // url: "run.php",
                     data: {
                         command: "propagate"
                     },

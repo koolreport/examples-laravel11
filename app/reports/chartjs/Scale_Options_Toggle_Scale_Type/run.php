@@ -35,7 +35,8 @@ if (!isset($_POST['command'])) {
     <title>
         Toggle Scale Type
     </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="csrf-token" content="<?php echo csrf_token(); ?>" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -44,11 +45,16 @@ if (!isset($_POST['command'])) {
     </div>
     <script>
         $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             $('#toggleScale').click(function(e) {
                 e.preventDefault();
                 $.ajax({
                     type: "POST",
-                    url: 'run.php',
+                    // url: 'run.php',
                     data: {
                         command: "toggleScale"
                     },
