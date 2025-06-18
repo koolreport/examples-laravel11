@@ -32,7 +32,7 @@ DataTables::create(array(
     ...
     "dataSource" => function() {
         return $this->src('employees')
-        ->query('select * from employees_salaries');
+        ->query('select * from salaries');
     },
     'scope' => array_merge($this->params, [
         '_token' => csrf_token()
@@ -49,7 +49,7 @@ DataTables::create(array(
         'name' => 'DataTable1',
         'dataSource' => function() {
             return $this->src('employees')
-            ->query('select * from employees_salaries');
+            ->query('select * from salaries');
             // ->query("select concat(e.first_name, ' ', e.last_name) as emp_name,
             // s.* from salaries s left join employees e on s.emp_no = e.emp_no");
         },
