@@ -98,6 +98,19 @@ or add csrf token to request:
             _token:'<?php echo csrf_token(); ?>'
         });
 ```
+or set csrf token in jQuery's ajax setup:
+
+```
+<meta name="csrf-token" content="<?php echo csrf_token(); ?>" />
+...
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+```
 
 # Summary
 
