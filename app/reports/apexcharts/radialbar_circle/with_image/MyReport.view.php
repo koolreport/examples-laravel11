@@ -34,7 +34,7 @@
                     'hollow' => [
                         'margin' => 15,
                         'size' => '70%',
-                        'image' => '/assets/images/clock.png',
+                        'image' => url()->to('/') . '/assets/images/clock.png',
                         'imageWidth' => 64,
                         'imageHeight' => 64,
                         'imageClipped' => false
@@ -51,7 +51,7 @@
                     ]
                 ],
                 'fill | image' => [
-                    'src' => '/assets/images/bar_image/4274635880_809a4b9d0d_z.jpg',
+                    'src' => url()->to('/') . '/assets/images/bar_image/4274635880_809a4b9d0d_z.jpg',
                 ],
                 'stroke | lineCap' => 'round',
             ],
