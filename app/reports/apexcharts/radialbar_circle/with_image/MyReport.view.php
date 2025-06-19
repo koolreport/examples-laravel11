@@ -51,7 +51,7 @@
                     ]
                 ],
                 'fill | image' => [
-                    'src' => url()->to('/') . '/assets/images/bar_image/4274635880_809a4b9d0d_z.jpg',
+                    'src' =>url('/') . '/assets/images/bar_image/4274635880_809a4b9d0d_z.jpg',
                 ],
                 'stroke | lineCap' => 'round',
             ],
